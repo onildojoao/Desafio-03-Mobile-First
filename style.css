@@ -70,11 +70,15 @@ header h1 {
   padding: 8px 8.6rem;
 }
 
-.grid-container {
+main {
   background-color: var(--bg-main);
+}
+
+.grid-container {
   padding: 1.4rem 3.2rem 6rem;
 
   display: grid;
+  object-fit: contain;
 
   gap: 3.2rem;
 
@@ -104,7 +108,8 @@ img {
 }
 
 .cards img {
-  height: 25.0rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 
   border-radius: 2.0rem;
@@ -121,6 +126,8 @@ img {
 }
 
 .cards h3 {
+  display: inline-flex;
+
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -135,6 +142,7 @@ img {
 
   color: var(--fc-cards);
   animation: topdown 700ms 550ms backwards;
+
 }
 
 footer {
@@ -218,15 +226,19 @@ footer span {
     margin: 5.2rem auto 12.5rem;
   }
 
-  .grid-container {
+  main {
     height: 72.0rem;
     width: 90.3rem;
+  }
+
+  .grid-container {
+    max-height: 85%;
     padding: 6.4rem 8.1rem 5.0rem 9.8rem;
 
-    grid-template-columns: 3;
 
-    grid-template-areas: "A D B"
-      "C D B";
+    grid-template-areas: "A B A"
+      "C B C"
+      "C D C";
   }
 
   #A {
@@ -244,6 +256,10 @@ footer span {
   #D {
     grid-area: D;
   }
+
+.cards h3 {
+  display: block;
+}
 
   footer {
     display: inline-flex;
