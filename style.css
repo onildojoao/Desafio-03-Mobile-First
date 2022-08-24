@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
   --fs-h1: 4.0rem;
-  --fs-main: 2.0rem;
+  --fs-p: 2.0rem;
   --fs-cards: 2.0rem;
 
   --fc-h1: #FFFFFF;
@@ -37,7 +37,6 @@ header {
 
   background-color: var(--bg-header);
 
-  position: relative;
   padding-top: 3.2rem;
 
   animation: topdown;
@@ -68,22 +67,16 @@ header h1 {
   color: var(--fc-h1);
   background-color: var(--bg-h1);
 
-  position: absolute;
   padding: 8px 8.6rem;
 }
 
-main {
+.grid-container {
   background-color: var(--bg-main);
   padding: 1.4rem 3.2rem 6rem;
 
   display: grid;
-  
-  gap: 3.2rem;
 
-  grid-template-areas:'A'
-  'B B'
-  'C'
-  'D D';
+  gap: 3.2rem;
 
   animation: downtop 700ms 350ms backwards;
 }
@@ -100,6 +93,7 @@ p {
   color: var(--fc-main);
 }
 
+
 img {
   width: 100%;
   height: auto;
@@ -110,10 +104,11 @@ img {
 }
 
 .cards img {
-  object-fit: cover;
   height: 25.0rem;
+  object-fit: cover;
 
   border-radius: 2.0rem;
+
   transition-property: transform;
   transition-duration: 300ms;
 
@@ -142,6 +137,29 @@ img {
   animation: topdown 700ms 550ms backwards;
 }
 
+footer {
+  display: none;
+
+  font-family: 'Open Sans', sans-serif;
+
+  position: absolute;
+
+  left: 56%;
+  top: 66rem;
+}
+
+footer h4 {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+
+  color: var(--fc-cards);
+}
+
+footer span {
+  font-weight: 700;
+}
+
 @keyframes topdown {
   0% {
     opacity: 0;
@@ -163,5 +181,71 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs-h1: 4.8rem;
+    --fs-p: 2.4rem;
+  }
+
+  .page {
+    max-width: 128rem;
+    display: flex;
+  }
+
+  header {
+    height: 72.0rem;
+    width: 37.7rem;
+  }
+
+  header h1 {
+    letter-spacing: 0px;
+    padding: 2.0rem 7.2rem;
+
+    width: 37.7rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: var(--fc-h1);
+    width: 27.5rem;
+    height: 26.2rem;
+
+    line-height: 2.0rem;
+
+    margin: 5.2rem auto 12.5rem;
+  }
+
+  .grid-container {
+    height: 72.0rem;
+    width: 90.3rem;
+    padding: 6.4rem 8.1rem 5.0rem 9.8rem;
+
+    grid-template-columns: 3;
+
+    grid-template-areas: "A D B"
+      "C D B";
+  }
+
+  #A {
+    grid-area: A;
+  }
+
+  #B {
+    grid-area: B;
+  }
+
+  #C {
+    grid-area: C;
+  }
+
+  #D {
+    grid-area: D;
+  }
+
+  footer {
+    display: inline-flex;
   }
 }
