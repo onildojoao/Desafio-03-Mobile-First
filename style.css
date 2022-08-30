@@ -33,7 +33,7 @@ header {
   align-items: center;
   text-align: center;
 
-  height: 31.9rem;
+  height: 44.0rem;
 
   background-color: var(--bg-header);
 
@@ -68,6 +68,10 @@ header h1 {
   background-color: var(--bg-h1);
 
   padding: 8px 8.6rem;
+}
+
+header p {
+  padding-top: 2rem;
 }
 
 main {
@@ -109,7 +113,7 @@ img {
 
 .cards img {
   width: 100%;
-  height: auto;
+  height: 10rem;
   object-fit: cover;
 
   border-radius: 2.0rem;
@@ -231,35 +235,58 @@ footer span {
     width: 90.3rem;
   }
 
+  .cards img {
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+
+    border-radius: 2.0rem;
+
+    transition-property: transform;
+    transition-duration: 300ms;
+
+    filter: brightness(0.8);
+  }
+
   .grid-container {
     max-height: 85%;
     padding: 6.4rem 8.1rem 5.0rem 9.8rem;
 
 
-    grid-template-areas: "A B A"
-      "C B C"
-      "C D C";
+    grid-template-areas: "A B C"
+      "D B E"
+      "D F E";
   }
 
-  #A {
+  #O1 {
     grid-area: A;
   }
 
-  #B {
+  #O2 {
     grid-area: B;
   }
 
-  #C {
-    grid-area: C;
+  #O3 {
+    grid-area: F;
   }
 
-  #D {
+  #O4 {
     grid-area: D;
   }
 
-.cards h3 {
-  display: block;
-}
+  #O5 {
+    grid-area: C;
+    opacity: 1;
+  }
+
+  #O6 {
+    grid-area: E;
+    opacity: 1;
+  }
+
+  .cards h3 {
+    display: none;
+  }
 
   footer {
     display: inline-flex;
