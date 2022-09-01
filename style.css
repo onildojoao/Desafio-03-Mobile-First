@@ -81,8 +81,10 @@ main {
 .grid-container {
   padding: 1.4rem 3.2rem 6rem;
 
+  max-width: 68.5rem;
+
   display: grid;
-  object-fit: contain;
+
 
   gap: 3.2rem;
 
@@ -103,8 +105,8 @@ p {
 
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .cards {
@@ -236,8 +238,8 @@ footer span {
   }
 
   .cards img {
-    width: 20rem;
-    height: 25rem;
+
+    height: 28rem;
     object-fit: cover;
 
     border-radius: 2.0rem;
@@ -249,39 +251,41 @@ footer span {
   }
 
   .grid-container {
-    max-height: 85%;
-    padding: 6.4rem 8.1rem 5.0rem 9.8rem;
+    padding-top: 4rem;
 
-
-    grid-template-areas: "A B C"
-      "D B E"
-      "D F E";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'A B C'
+      'D E F';
   }
 
-  #O1 {
+  .grid-container:nth-child(1) {
     grid-area: A;
+
   }
 
-  #O2 {
+  .grid-container:nth-child(2) {
     grid-area: B;
+
   }
 
-  #O3 {
-    grid-area: F;
-  }
-
-  #O4 {
-    grid-area: D;
-  }
-
-  #O5 {
+  .grid-container:nth-child(3) {
     grid-area: C;
-    opacity: 1;
+
   }
 
-  #O6 {
+  .grid-container:nth-child(4) {
+    grid-area: D;
+
+  }
+
+  .grid-container :nth-child(5) {
     grid-area: E;
-    opacity: 1;
+
+  }
+
+  .grid-container:nth-child(6) {
+    grid-area: F;
+
   }
 
   .cards h3 {
