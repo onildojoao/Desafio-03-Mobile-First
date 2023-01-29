@@ -22,7 +22,7 @@ This project was developed with following technology:
 - JavaScript 
 - Git & Github
 
-## 💻 project
+## 💻 Project
 
 World Cup Calendar shows some games from Fifa World Cup 2022, and all the elements like flags and game times are dynamically created with Javascript by updating HTML using DOM.
 
@@ -30,7 +30,7 @@ World Cup Calendar shows some games from Fifa World Cup 2022, and all the elemen
 
 You can visualize the original layout by clicking [THIS LINK](https://www.figma.com/file/pddZCuQIRLjk5dEHQ4L4YR/Stage-03---Grid-com-anima%C3%A7%C3%B5es/duplicate). You need to have an Figma account [Figma](https://figma.com) to access.
 
-## :memo: license
+## :memo: License
 
 This project is under by MIt license.
 
