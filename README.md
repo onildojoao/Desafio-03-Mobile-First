@@ -14,10 +14,6 @@
 
 <br>
 
-<p align="center">
-  <img alt="World Cup Calendar" src=".github/calendar.png" width="100%">
-</p>
-
 ## 🚀 Technology
 
 This project was developed with following technology:
